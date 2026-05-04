@@ -1,0 +1,12 @@
+### All Events
+
+GET {{BASE_URL}}/events HTTP/1.1
+Content-Type: application/json
+
+>>! /tmp/response.json
+
+
+### Single Event
+
+GET {{BASE_URL}}/events/1 HTTP/1.1
+Connection: application/json
