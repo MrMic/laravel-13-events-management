@@ -1,3 +1,12 @@
+## [5.7.1] - 2026-05-05
+
+### 🚀 Features
+
+- *(api)* Implement store endpoint for events
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [5.6.1] - 2026-05-04
 
 ### 🚀 Features
