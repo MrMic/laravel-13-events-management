@@ -19,7 +19,22 @@ Content-Type: application/json
 Accept: application/json
 
 {
+  "end_time": "2024-07-04 12:00:00",
   "name": "New Event",
-  "start_time": "2024-07-01 10:00:00",
-  "end_time": "2024-07-04 12:00:00"
+  "start_time": "2024-07-01 10:00:00"
 }
+
+
+### Update Event
+
+PUT {{BASE_URL}}/events/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Updated Event Name 1"
+}
+
+
+### Delete Event
+
+DELETE {{BASE_URL}}/events/1 HTTP/1.1
