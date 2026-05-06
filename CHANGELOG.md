@@ -1,3 +1,12 @@
+## [5.8.1] - 2026-05-06
+
+### 🚀 Features
+
+- *(api)* Implement update and destroy endpoints for events
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [5.7.1] - 2026-05-05
 
 ### 🚀 Features
