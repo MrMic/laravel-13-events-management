@@ -34,6 +34,7 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * @method bool|null delete()
  * @property int $id
  * @property int $user_id
  * @property string $name

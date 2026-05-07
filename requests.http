@@ -8,8 +8,8 @@ Content-Type: application/json
 
 ### Single Event
 
-GET {{BASE_URL}}/events/1 HTTP/1.1
-Connection: application/json
+GET {{BASE_URL}}/events/2 HTTP/1.1
+Accept: application/json
 
 
 ### Create Event
