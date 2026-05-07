@@ -1,3 +1,12 @@
+## [5.9.1] - 2026-05-07
+
+### 🚀 Features
+
+- *(api)* Add API resources for Event, Attendee, and User
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [5.8.1] - 2026-05-06
 
 ### 🚀 Features
