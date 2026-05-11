@@ -1,3 +1,12 @@
+## [unreleased]
+
+### 🚀 Features
+
+- *(api)* Implement CRUD endpoints for attendees
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [5.9.1] - 2026-05-07
 
 ### 🚀 Features
