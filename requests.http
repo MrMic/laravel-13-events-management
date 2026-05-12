@@ -1,6 +1,6 @@
 ### All Events
 
-GET {{BASE_URL}}/events HTTP/1.1
+GET {{BASE_URL}}/events?include=user,attendees,attendees.user HTTP/1.1
 Content-Type: application/json
 
 >>! /tmp/response.json
