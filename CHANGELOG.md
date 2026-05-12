@@ -1,4 +1,9 @@
-## [unreleased]
+## [5.11.1] - 2026-05-12
+
+### 🚀 Features
+
+- *(api)* Add optional relation loading to events index
+## [5.10.1] - 2026-05-11
 
 ### 🚀 Features
 
@@ -6,6 +11,7 @@
 
 ### ⚙️ Miscellaneous Tasks
 
+- *(changelog)* Update CHANGELOG.md
 - *(changelog)* Update CHANGELOG.md
 ## [5.9.1] - 2026-05-07
 
