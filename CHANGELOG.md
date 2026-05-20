@@ -1,3 +1,12 @@
+## [5.13.1] - 2026-05-20
+
+### 🚜 Refactor
+
+- *(api)* Extract CanLoadRelationships trait
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [5.11.1] - 2026-05-12
 
 ### 🚀 Features
