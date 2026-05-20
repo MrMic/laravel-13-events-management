@@ -3,18 +3,19 @@
 GET {{BASE_URL}}/events?include=user,attendees,attendees.user HTTP/1.1
 Content-Type: application/json
 
->>! /tmp/response.json
+# >>! /tmp/response.json
 
 
 ### Single Event
 
-GET {{BASE_URL}}/events/2 HTTP/1.1
+GET {{BASE_URL}}/events/2
+Content-Type: application/json
 Accept: application/json
 
 
 ### Create Event
 
-POST {{BASE_URL}}/events HTTP/1.1
+POST {{BASE_URL}}/events?include=user,attendees HTTP/1.1
 Content-Type: application/json
 Accept: application/json
 
@@ -27,7 +28,7 @@ Accept: application/json
 
 ### Update Event
 
-PUT {{BASE_URL}}/events/1 HTTP/1.1
+PUT {{BASE_URL}}/events/79
 Content-Type: application/json
 
 {
@@ -35,30 +36,36 @@ Content-Type: application/json
 }
 
 
-### Delete Event
+### ⚠ Delete Event
 
-DELETE {{BASE_URL}}/events/1 HTTP/1.1
+DELETE {{BASE_URL}}/events/2
 
 
 ### Attendees
 
-GET {{BASE_URL}}/events/2/attendees HTTP/1.1
+GET {{BASE_URL}}/events/79/attendees
+Accept: application/json
+
+
+### Attendee
+
+GET {{BASE_URL}}/events/79/attendees/50?include=user
 Accept: application/json
 
 
 ### Add Attendee
 
-GET {{BASE_URL}}/events/2/attendees/1820 HTTP/1.1
+GET {{BASE_URL}}/events/2/attendees
 Accept: application/json
 
 
-### Remove Attendee
+### ⚠ Remove Attendee
 
-DELETE {{BASE_URL}}/events/2/attendees/1820 HTTP/1.1
+DELETE {{BASE_URL}}/events/2/attendees/1985
 Accept: application/json
 
 
 ### Add Attendee to Event
 
-POST {{BASE_URL}}/events/2/attendees HTTP/1.1
+POST {{BASE_URL}}/events/2/attendees
 Content-Type: application/json
