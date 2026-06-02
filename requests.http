@@ -69,3 +69,15 @@ Accept: application/json
 
 POST {{BASE_URL}}/events/2/attendees
 Content-Type: application/json
+
+
+### 🔑 LOGIN
+
+POST {{BASE_URL}}/login
+Content-Type: application/json
+Accept: application/json
+
+{
+    "email": "kieran00@example.net",
+    "password": "password"
+}
