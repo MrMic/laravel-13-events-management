@@ -1,3 +1,12 @@
+## [unreleased]
+
+### 🚀 Features
+
+- *(api)* Add auth endpoints and static analysis tooling
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [5.13.1] - 2026-05-20
 
 ### 🚜 Refactor
