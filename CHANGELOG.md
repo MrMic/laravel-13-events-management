@@ -1,11 +1,16 @@
-## [unreleased]
+## [5.15.1] - 2026-06-04
 
 ### 🚀 Features
 
 - *(api)* Add auth endpoints and static analysis tooling
 
+### 🚜 Refactor
+
+- *(auth)* Migrate EventController to HasMiddleware interface
+
 ### ⚙️ Miscellaneous Tasks
 
+- *(changelog)* Update CHANGELOG.md
 - *(changelog)* Update CHANGELOG.md
 ## [5.13.1] - 2026-05-20
 
