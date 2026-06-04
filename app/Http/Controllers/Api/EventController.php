@@ -7,15 +7,24 @@ use App\Http\Resources\EventResource;
 use App\Http\Traits\CanLoadRelationships;
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controllers\HasMiddleware;
+use Illuminate\Routing\Controllers\Middleware;
 
 /** @package App\Http\Controllers\Api */
-class EventController extends Controller
+class EventController extends Controller implements HasMiddleware
 {
     use CanLoadRelationships;
 
     private array $relations;
 
-    // INFO:── CONSTRUCTOR ─────────────────────────────────────────────────────
+    // WARN: Workaround to apply middleware to specific methods in a resource controller => Laravel: 11+
+    public static function middleware(): array
+    {
+        return [
+            new Middleware('auth:sanctum', except: ['index', 'show']),
+        ];
+    }
+
     public function __construct()
     {
         $this->relations = ["user", "attendees", "attendees.user"];
@@ -43,7 +52,7 @@ class EventController extends Controller
                 "start_time" => "required|date",
                 "end_time" => "required|date|after:start_time",
             ]),
-            "user_id" => 1,
+            "user_id" => $request->user()->id,
         ]);
 
         return new EventResource($this->loadRelationships($event));
@@ -54,7 +63,9 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        return new EventResource($this->loadRelationships($event));
+        return new EventResource(
+            $this->loadRelationships($event)
+        );
 
     }
 

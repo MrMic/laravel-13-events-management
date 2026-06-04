@@ -1,4 +1,17 @@
-### All Events
+
+### ⚠ 🔑 LOGIN ⚠
+POST {{BASE_URL}}/login
+Content-Type: application/json
+Accept: application/json
+-> jq-set-var :auth-token .token
+
+{
+    "email": "german55@example.org",
+    "password": "password"
+}
+
+
+# All Events
 
 GET {{BASE_URL}}/events?include=user,attendees,attendees.user HTTP/1.1
 Content-Type: application/json
@@ -18,6 +31,7 @@ Accept: application/json
 POST {{BASE_URL}}/events?include=user,attendees HTTP/1.1
 Content-Type: application/json
 Accept: application/json
+Authorization: Bearer :auth-token
 
 {
   "end_time": "2024-07-04 12:00:00",
@@ -71,13 +85,10 @@ POST {{BASE_URL}}/events/2/attendees
 Content-Type: application/json
 
 
-### 🔑 LOGIN
 
-POST {{BASE_URL}}/login
-Content-Type: application/json
+
+### USER - Requête authentifiée réutilisant le token
+
+GET {{BASE_URL}}/user
 Accept: application/json
-
-{
-    "email": "kieran00@example.net",
-    "password": "password"
-}
+Authorization: Bearer :auth-token
