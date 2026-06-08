@@ -4,6 +4,7 @@ includes:
 parameters:
     paths:
         - app/
+        - config/
     level: 5
     phpVersion: 80400
     parallel:

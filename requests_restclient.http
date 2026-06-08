@@ -85,10 +85,15 @@ POST {{BASE_URL}}/events/2/attendees
 Content-Type: application/json
 
 
-
-
 ### USER - Requête authentifiée réutilisant le token
 
 GET {{BASE_URL}}/user
+Accept: application/json
+Authorization: Bearer :auth-token
+
+
+### USER - LOGOUT
+
+POST {{BASE_URL}}/logout
 Accept: application/json
 Authorization: Bearer :auth-token
