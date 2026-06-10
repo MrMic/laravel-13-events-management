@@ -9,6 +9,7 @@ use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
+use Illuminate\Support\Facades\Gate;
 
 /** @package App\Http\Controllers\Api */
 class EventController extends Controller implements HasMiddleware
@@ -74,6 +75,13 @@ class EventController extends Controller implements HasMiddleware
      */
     public function update(Request $request, Event $event)
     {
+        // INFO: Not authorized if the user is not the owner of the event
+        // if (Gate::denies("update-event", $event)) {
+        //     abort(403, "You are not authorized to update this event.");
+        // }
+        // INFO: Idem as above but with a more elegant syntax
+        Gate::authorize("update-event", $event);
+
         $event->update(
             $request->validate([
                 "name" => "sometimes|string|max:255",

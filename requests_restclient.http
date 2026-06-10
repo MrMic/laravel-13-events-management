@@ -97,3 +97,21 @@ Authorization: Bearer :auth-token
 POST {{BASE_URL}}/logout
 Accept: application/json
 Authorization: Bearer :auth-token
+
+
+### UPDATE AN EVENT
+
+PUT {{BASE_URL}}/events/56
+Content-Type: application/json
+Accept: application/json
+Authorization: Bearer :auth-token
+
+{
+    "name": "New Updated Event!"
+}
+
+
+### UNATTEND
+DELETE {{BASE_URL}}/events/130/attendees/4
+Accept: application/json
+Authorization: Bearer :auth-token
