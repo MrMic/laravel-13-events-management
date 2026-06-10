@@ -1,10 +1,18 @@
-# CHANGELOG
-
-## [5.15.1] - 2026-06-04
+## [unreleased]
 
 ### 🚀 Features
 
-- *(api)* Add auth endpoints and static analysis tooling
+- *(auth)* Add authorization gates and middleware
+## [5.17.1] - 2026-06-08
+
+### 🚀 Features
+
+- *(auth)* Implement logout endpoint with token revocation
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
+## [5.15.1] - 2026-06-04
 
 ### 🚜 Refactor
 
@@ -13,6 +21,14 @@
 ### ⚙️ Miscellaneous Tasks
 
 - *(changelog)* Update CHANGELOG.md
+## [5.14.1] - 2026-06-02
+
+### 🚀 Features
+
+- *(api)* Add auth endpoints and static analysis tooling
+
+### ⚙️ Miscellaneous Tasks
+
 - *(changelog)* Update CHANGELOG.md
 ## [5.13.1] - 2026-05-20
 
@@ -69,8 +85,6 @@
 
 ### 🚀 Features
 
-- *(api)* Scaffold events & attendees REST API with Sanctum
-- *(db)* Add seeders and factory for events and attendees
 - *(api)* Implement index and show endpoints for events
 
 ### ⚙️ Miscellaneous Tasks
@@ -78,3 +92,9 @@
 - Add changelog, cliff config, and README link
 - *(changelog)* Add GitHub Action to auto-update CHANGELOG.md
 - *(changelog)* Update CHANGELOG.md
+## [5.5.0] - 2026-05-01
+
+### 🚀 Features
+
+- *(api)* Scaffold events & attendees REST API with Sanctum
+- *(db)* Add seeders and factory for events and attendees
