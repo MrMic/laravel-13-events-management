@@ -13,12 +13,14 @@ class Attendee extends Model
     use HasFactory;
 
     // ______________________________________________________________________
+    /** @return BelongsTo<User, $this> */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
     // ______________________________________________________________________
+    /** @return BelongsTo<Event, $this> */
     public function event(): BelongsTo
     {
         return $this->belongsTo(Event::class);

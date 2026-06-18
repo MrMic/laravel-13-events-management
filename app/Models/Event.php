@@ -15,12 +15,14 @@ class Event extends Model
     use HasFactory;
 
     // ______________________________________________________________________
+    /** @return BelongsTo<User, $this> */
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
     }
 
     // ______________________________________________________________________
+    /** @return HasMany<Attendee, $this> */
     public function attendees(): HasMany
     {
         return $this->hasMany(Attendee::class);
