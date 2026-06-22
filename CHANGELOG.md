@@ -1,8 +1,16 @@
-## [unreleased]
+## [5.22.1] - 2026-06-22
+
+### 🚀 Features
+
+- *(policies)* Add authorization policies for attendee and event
 
 ### 🐛 Bug Fixes
 
 - *(models)* Type relations so reminder command resolves attendees
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [5.19.1] - 2026-06-10
 
 ### 🚀 Features
