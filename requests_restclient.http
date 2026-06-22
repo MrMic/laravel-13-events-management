@@ -11,7 +11,7 @@ Accept: application/json
 }
 
 
-# All Events
+### ALL EVENTS
 
 GET {{BASE_URL}}/events?include=user,attendees,attendees.user HTTP/1.1
 Content-Type: application/json
@@ -19,14 +19,14 @@ Content-Type: application/json
 # >>! /tmp/response.json
 
 
-### Single Event
+### SINGLE EVENT
 
 GET {{BASE_URL}}/events/2
 Content-Type: application/json
 Accept: application/json
 
 
-### Create Event
+### CREATE EVENT
 
 POST {{BASE_URL}}/events?include=user,attendees HTTP/1.1
 Content-Type: application/json
