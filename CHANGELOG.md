@@ -1,8 +1,18 @@
 ## [unreleased]
 
+### 🐛 Bug Fixes
+
+- *(models)* Type relations so reminder command resolves attendees
+## [5.19.1] - 2026-06-10
+
 ### 🚀 Features
 
 - *(auth)* Add authorization gates and middleware
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
+- Ignore php-cs-fixer cache files
 ## [5.17.1] - 2026-06-08
 
 ### 🚀 Features
