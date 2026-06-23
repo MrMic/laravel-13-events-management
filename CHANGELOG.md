@@ -1,3 +1,9 @@
+## [5.23.1] - 2026-06-23
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
+- *(routes)* Update php-cs-fixer cache and add daily reminder task
 ## [5.22.1] - 2026-06-22
 
 ### 🚀 Features
