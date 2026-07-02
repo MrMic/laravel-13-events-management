@@ -1,3 +1,12 @@
+## [5.24.1] - 2026-07-02
+
+### 🚀 Features
+
+- *(notifications)* Implement event reminder notifications
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [5.23.1] - 2026-06-23
 
 ### ⚙️ Miscellaneous Tasks
