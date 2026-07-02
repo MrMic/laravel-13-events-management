@@ -4,11 +4,13 @@ namespace App\Console\Commands;
 
 use App\Models\Attendee;
 use App\Models\Event;
+use App\Notifications\EventReminderNotification;
 use Illuminate\Console\Attributes\Description;
 use Illuminate\Console\Attributes\Signature;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 
+/** @package App\Console\Commands */
 #[Signature('app:send-event-reminders')]
 #[Description("Send notifications to all event's attendees that event starts soon")]
 class SendEventReminders extends Command
@@ -29,7 +31,7 @@ class SendEventReminders extends Command
 
         $events->each(
             fn ($event) => $event->attendees->each(
-                fn (Attendee $attendee) => $this->info("Notifying the user {$attendee->user->id}")
+                fn (Attendee $attendee) => $attendee->user->notify(new EventReminderNotification($event))
             )
         );
 

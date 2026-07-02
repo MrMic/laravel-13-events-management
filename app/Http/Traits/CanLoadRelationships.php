@@ -15,7 +15,7 @@ trait CanLoadRelationships
         ?array $relations = null,
     ): Model|QueryBuilder|EloquentBuilder|HasMany {
         // INFO: $this->relations will be defined in the class using this trait.
-        $relations = $relations ?? ($this->relations ?? []);
+        $relations = $relations ?? $this->relations;
 
         foreach ($relations as $relation) {
             $for->when(
