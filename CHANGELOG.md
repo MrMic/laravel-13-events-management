@@ -1,3 +1,12 @@
+## [5.25.1] - 2026-07-06
+
+### 🚀 Features
+
+- *(SendEventReminders)* Make command queueable
+
+### ⚙️ Miscellaneous Tasks
+
+- *(changelog)* Update CHANGELOG.md
 ## [5.24.1] - 2026-07-02
 
 ### 🚀 Features
